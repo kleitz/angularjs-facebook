@@ -1,0 +1,12 @@
+.buttons__wrapper {
+  margin-left: 10px;
+  width: 180px;
+}
+.page__title {
+  text-align: center;
+  padding: 20px;
+  color: #4c70e6;
+}
+.panel-body {
+  padding-top: 0 !important;
+}

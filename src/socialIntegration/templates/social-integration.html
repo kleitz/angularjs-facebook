@@ -1,0 +1,32 @@
+<div class="buttons__wrapper">
+    <a class="btn btn-block btn-social btn-xs btn-facebook" ng-if="socialIntegration.data.showLoginButton" ng-click="socialIntegration.loginOnFacebook()">
+        <i class="fa fa-facebook"></i>
+        Sign in with Facebook
+    </a>
+
+    <a class="btn btn-block btn-social btn-xs btn-facebook" ng-if="!socialIntegration.data.showLoginButton" ng-click="socialIntegration.logoutFromFacebook()">
+        <i class="fa fa-facebook"></i>
+        Logout
+    </a>
+    <br/>
+    <img ng-show="socialIntegration.data.facebookData.pictureUrl" src="{{socialIntegration.data.facebookData.pictureUrl}}">
+</div>
+
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Info</h3>
+    </div>
+    <div class="panel-body">
+        <pre ng-if="socialIntegration.data.facebookData">{{socialIntegration.data.facebookDataStringified}}</pre>
+        <pre ng-if="!socialIntegration.data.facebookData">No information available</pre>
+    </div>
+</div>
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Tokens</h3>
+    </div>
+    <div class="panel-body">
+        <pre ng-if="socialIntegration.data.facebookTokens">{{socialIntegration.data.facebookTokensStringified}}</pre>
+        <pre ng-if="!socialIntegration.data.facebookTokens">No information available</pre>
+    </div>
+</div>
