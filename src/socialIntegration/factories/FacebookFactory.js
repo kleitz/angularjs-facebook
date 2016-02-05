@@ -61,7 +61,6 @@
         function login() {
             var deferred = $q.defer();
             FB.login(function(response) {
-                console.info(response);
                 if (response.status === 'connected') {
                     deferred.resolve(response);
                 } else if (response.status === 'not_authorized') { // The person is logged into Facebook, but not your app.
